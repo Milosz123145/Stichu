@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pl">
 
 <head>
@@ -20,12 +20,32 @@
             background-color: #1e90ff;
             color: white;
             text-align: center;
-            padding: 40px 20px;
-            background-image: url('images/Oze2.jpg');
-            background-size: cover;
-            background-position: center;
+            padding: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: background-color 0.3s, color 0.3s;
+        }
+
+        .logo {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .menu {
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 20px;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .menu a:hover {
+            background-color: #3498db;
+            color: white;
         }
 
         nav {
@@ -111,16 +131,54 @@
             }
         }
 
+        .contact-form {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .contact-form button {
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #1e90ff;
+        }
+
         footer {
             text-align: center;
             background-color: #333333;
             color: white;
             padding: 20px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
             box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
             transition: background-color 0.3s, color 0.3s;
+        }
+
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #1e90ff;
         }
 
         .tabs {
@@ -156,61 +214,112 @@
         .header-image:hover {
             transform: scale(1.05);
         }
+
+        /* Dodaj styl dla interaktywnych elementów */
+        .quiz-container {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .quiz-question {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .quiz-options {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .quiz-options li {
+            margin-bottom: 10px;
+        }
+
+        .quiz-options input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .quiz-submit {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .quiz-submit:hover {
+            background-color: #1e90ff;
+        }
+
+        .quiz-result {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #2c3e50;
+        }
     </style>
 </head>
 
 <body>
 
     <header>
-        <h1>Odnawialne Źródła Energii (OZE)</h1>
-        <p>Przyszłość energii: Czysta i zrównoważona energia dla lepszego jutra</p>
+        <img src="images/logo.png" alt="Logo" class="logo">
+        <nav class="menu">
+            <a href="#intro">O OZE</a>
+            <a href="#technologies">Technologie</a>
+            <a href="#contact">Kontakt</a>
+        </nav>
     </header>
 
-    <nav class="tabs">
-        <a href="solar.html">Energia słoneczna</a>
-        <a href="wind.html">Energia wiatrowa</a>
-        <a href="hydro.html">Energia wodna</a>
-        <a href="geothermal.html">Energia geotermalna</a>
-        <a href="biomass.html">Energia biomasy</a>
-        <a href="ocean.html">Energia oceaniczna</a>
-    </nav>
-
     <div class="container">
-        <img src="images/Oze4.jpg" alt="Odnawialne Źródła Energii" class="header-image">
-        <section id="solar" class="section">
-            <h2>Energia Słoneczna</h2>
-            <p>Energia słoneczna jest jednym z najbardziej powszechnych i czystych źródeł energii. Dzięki panelom słonecznym możliwe jest pozyskiwanie energii bezpośrednio z promieniowania słonecznego.</p>
-            <img src="images/Oze3.jpg" alt="Panele słoneczne" class="image">
+        <section id="intro" class="section">
+            <h2>Odnawialne Źródła Energii (OZE)</h2>
+            <p>Odnawialne źródła energii (OZE) to źródła energii, które są odnawialne w krótkim czasie i nie wyczerpują się. OZE obejmują energię słoneczną, wiatrową, wodną, geotermalną, biomasę i energię oceaniczną. Są one kluczowe dla zrównoważonego rozwoju i ochrony środowiska.</p>
         </section>
 
-        <section id="wind" class="section">
-            <h2>Energia Wiatrowa</h2>
-            <p>Energia wiatrowa wykorzystuje ruch powietrza do produkcji energii elektrycznej za pomocą turbin wiatrowych. Jest to jedno z najbardziej rozwiniętych źródeł odnawialnych.</p>
-            <div class="wind-turbine"></div>
+        <section id="technologies" class="section">
+            <h2>Technologie OZE</h2>
+            <div class="technology">
+                <h3>Energia Słoneczna</h3>
+                <p>Energia słoneczna jest jednym z najbardziej powszechnych i czystych źródeł energii. Dzięki panelom słonecznym możliwe jest pozyskiwanie energii bezpośrednio z promieniowania słonecznego.</p>
+                <img src="images/Oze3.jpg" alt="Panele słoneczne" class="image">
+            </div>
+            <div class="technology">
+                <h3>Energia Wiatrowa</h3>
+                <p>Energia wiatrowa wykorzystuje ruch powietrza do produkcji energii elektrycznej za pomocą turbin wiatrowych. Jest to jedno z najbardziej rozwiniętych źródeł odnawialnych.</p>
+                <div class="wind-turbine"></div>
+            </div>
+            <div class="technology">
+                <h3>Energia Wodna</h3>
+                <p>Energia wodna pochodzi z przepływających wód, które mogą napędzać turbiny w elektrowniach wodnych. Jest to jedno z najstarszych źródeł energii odnawialnej.</p>
+            </div>
+            <div class="technology">
+                <h3>Energia Geotermalna</h3>
+                <p>Energia geotermalna wykorzystuje ciepło wnętrza ziemi do produkcji energii. Jest to stabilne źródło energii, które nie zależy od warunków atmosferycznych.</p>
+            </div>
+            <div class="technology">
+                <h3>Energia Biomasy</h3>
+                <p>Energia biomasy pochodzi z materii organicznej, takiej jak drewno, odpady rolnicze i inne materiały biologiczne. Jest to odnawialne źródło energii, które może być wykorzystywane do produkcji ciepła, energii elektrycznej i paliw.</p>
+            </div>
+            <div class="technology">
+                <h3>Energia Oceaniczna</h3>
+                <p>Energia oceaniczna wykorzystuje ruch wody w oceanach, taki jak fale, pływy i prądy, do produkcji energii. Jest to obiecujące źródło energii odnawialnej, które ma potencjał do dostarczania dużych ilości energii.</p>
+            </div>
         </section>
 
-        <section id="hydro" class="section">
-            <h2>Energia Wodna</h2>
-            <p>Energia wodna pochodzi z przepływających wód, które mogą napędzać turbiny w elektrowniach wodnych. Jest to jedno z najstarszych źródeł energii odnawialnej.</p>
-            <!-- <img src="images/hydro.jpg" alt="Elektrownia wodna" class="image"> -->
-        </section>
-
-        <section id="geothermal" class="section">
-            <h2>Energia Geotermalna</h2>
-            <p>Energia geotermalna wykorzystuje ciepło wnętrza ziemi do produkcji energii. Jest to stabilne źródło energii, które nie zależy od warunków atmosferycznych.</p>
-            <!-- <img src="images/geothermal.jpg" alt="Geotermia" class="image"> -->
-        </section>
-
-        <section id="biomass" class="section">
-            <h2>Energia Biomasy</h2>
-            <p>Energia biomasy pochodzi z materii organicznej, takiej jak drewno, odpady rolnicze i inne materiały biologiczne. Jest to odnawialne źródło energii, które może być wykorzystywane do produkcji ciepła, energii elektrycznej i paliw.</p>
-            <!-- <img src="images/biomass.jpg" alt="Biomasa" class="image"> -->
-        </section>
-
-        <section id="ocean" class="section">
-            <h2>Energia Oceaniczna</h2>
-            <p>Energia oceaniczna wykorzystuje ruch wody w oceanach, taki jak fale, pływy i prądy, do produkcji energii. Jest to obiecujące źródło energii odnawialnej, które ma potencjał do dostarczania dużych ilości energii.</p>
-            <!-- <img src="images/ocean.jpg" alt="Energia oceaniczna" class="image"> -->
+        <section id="contact" class="section contact-form">
+            <h2>Kontakt</h2>
+            <form>
+                <input type="text" name="name" placeholder="Imię i nazwisko" required>
+                <input type="email" name="email" placeholder="Adres email" required>
+                <textarea name="message" rows="5" placeholder="Wiadomość" required></textarea>
+                <button type="submit">Wyślij</button>
+            </form>
         </section>
 
         <section id="facts" class="section">
@@ -222,13 +331,143 @@
                 <li>Islandia jest liderem w wykorzystaniu energii geotermalnej.</li>
                 <li>Biomasa może być wykorzystywana do produkcji biopaliw, takich jak bioetanol i biodiesel.</li>
                 <li>Energia oceaniczna ma potencjał do dostarczania dużych ilości energii, ale technologia jest jeszcze w fazie rozwoju.</li>
+                <li>Energia słoneczna może być wykorzystywana do zasilania pojazdów elektrycznych.</li>
+                <li>W 2020 roku energia wiatrowa stanowiła około 6% globalnej produkcji energii elektrycznej.</li>
+                <li>Największa elektrownia wodna na świecie to Zapora Trzech Przełomów w Chinach.</li>
+                <li>Energia geotermalna może być wykorzystywana do produkcji wodoru, który jest czystym paliwem.</li>
+                <li>Biomasa może być przekształcana w biogaz, który może być używany do produkcji energii elektrycznej i ciepła.</li>
+                <li>Energia oceaniczna może być wykorzystywana do odsalania wody morskiej, co jest ważne dla krajów z ograniczonym dostępem do wody pitnej.</li>
             </ul>
+        </section>
+
+        <section id="quiz" class="quiz-container">
+            <h2>Quiz o OZE</h2>
+            <form id="quiz-form">
+                <div class="quiz-question">1. Które z poniższych źródeł energii jest odnawialne?</div>
+                <ul class="quiz-options">
+                    <li><label><input type="radio" name="q1" value="1"> Węgiel</label></li>
+                    <li><label><input type="radio" name="q1" value="2"> Energia słoneczna</label></li>
+                    <li><label><input type="radio" name="q1" value="3"> Gaz ziemny</label></li>
+                    <li><label><input type="radio" name="q1" value="4"> Ropa naftowa</label></li>
+                </ul>
+
+                <div class="quiz-question">2. Które z poniższych źródeł energii jest najstarsze?</div>
+                <ul class="quiz-options">
+                    <li><label><input type="radio" name="q2" value="1"> Energia słoneczna</label></li>
+                    <li><label><input type="radio" name="q2" value="2"> Energia wiatrowa</label></li>
+                    <li><label><input type="radio" name="q2" value="3"> Energia wodna</label></li>
+                    <li><label><input type="radio" name="q2" value="4"> Energia geotermalna</label></li>
+                </ul>
+
+                <div class="quiz-question">3. Które z poniższych źródeł energii jest najbardziej rozwinięte?</div>
+                <ul class="quiz-options">
+                    <li><label><input type="radio" name="q3" value="1"> Energia słoneczna</label></li>
+                    <li><label><input type="radio" name="q3" value="2"> Energia wiatrowa</label></li>
+                    <li><label><input type="radio" name="q3" value="3"> Energia wodna</label></li>
+                    <li><label><input type="radio" name="q3" value="4"> Energia geotermalna</label></li>
+                </ul>
+
+                <div class="quiz-question">4. Które z poniższych źródeł energii jest najbardziej stabilne?</div>
+                <ul class="quiz-options">
+                    <li><label><input type="radio" name="q4" value="1"> Energia słoneczna</label></li>
+                    <li><label><input type="radio" name="q4" value="2"> Energia wiatrowa</label></li>
+                    <li><label><input type="radio" name="q4" value="3"> Energia wodna</label></li>
+                    <li><label><input type="radio" name="q4" value="4"> Energia geotermalna</label></li>
+                </ul>
+
+                <div class="quiz-question">5. Które z poniższych źródeł energii jest najbardziej przyjazne dla środowiska?</div>
+                <ul class="quiz-options">
+                    <li><label><input type="radio" name="q5" value="1"> Energia słoneczna</label></li>
+                    <li><label><input type="radio" name="q5" value="2"> Energia wiatrowa</label></li>
+                    <li><label><input type="radio" name="q5" value="3"> Energia wodna</label></li>
+                    <li><label><input type="radio" name="q5" value="4"> Energia geotermalna</label></li>
+                </ul>
+
+                <div class="quiz-question">6. Które z poniższych źródeł energii jest najbardziej wydajne?</div>
+                <ul class="quiz-options">
+                    <li><label><input type="radio" name="q6" value="1"> Energia słoneczna</label></li>
+                    <li><label><input type="radio" name="q6" value="2"> Energia wiatrowa</label></li>
+                    <li><label><input type="radio" name="q6" value="3"> Energia wodna</label></li>
+                    <li><label><input type="radio" name="q6" value="4"> Energia geotermalna</label></li>
+                </ul>
+
+                <div class="quiz-question">7. Które z poniższych źródeł energii jest najbardziej rozwinięte technologicznie?</div>
+                <ul class="quiz-options">
+                    <li><label><input type="radio" name="q7" value="1"> Energia słoneczna</label></li>
+                    <li><label><input type="radio" name="q7" value="2"> Energia wiatrowa</label></li>
+                    <li><label><input type="radio" name="q7" value="3"> Energia wodna</label></li>
+                    <li><label><input type="radio" name="q7" value="4"> Energia geotermalna</label></li>
+                </ul>
+
+                <div class="quiz-question">8. Które z poniższych źródeł energii jest najbardziej niezawodne?</div>
+                <ul class="quiz-options">
+                    <li><label><input type="radio" name="q8" value="1"> Energia słoneczna</label></li>
+                    <li><label><input type="radio" name="q8" value="2"> Energia wiatrowa</label></li>
+                    <li><label><input type="radio" name="q8" value="3"> Energia wodna</label></li>
+                    <li><label><input type="radio" name="q8" value="4"> Energia geotermalna</label></li>
+                </ul>
+
+                <div class="quiz-question">9. Które z poniższych źródeł energii jest najbardziej zrównoważone?</div>
+                <ul class="quiz-options">
+                    <li><label><input type="radio" name="q9" value="1"> Energia słoneczna</label></li>
+                    <li><label><input type="radio" name="q9" value="2"> Energia wiatrowa</label></li>
+                    <li><label><input type="radio" name="q9" value="3"> Energia wodna</label></li>
+                    <li><label><input type="radio" name="q9" value="4"> Energia geotermalna</label></li>
+                </ul>
+
+                <div class="quiz-question">10. Które z poniższych źródeł energii jest najbardziej przyszłościowe?</div>
+                <ul class="quiz-options">
+                    <li><label><input type="radio" name="q10" value="1"> Energia słoneczna</label></li>
+                    <li><label><input type="radio" name="q10" value="2"> Energia wiatrowa</label></li>
+                    <li><label><input type="radio" name="q10" value="3"> Energia wodna</label></li>
+                    <li><label><input type="radio" name="q10" value="4"> Energia geotermalna</label></li>
+                </ul>
+
+                <button class="quiz-submit" type="button" onclick="submitQuiz()">Sprawdź odpowiedzi</button>
+            </form>
+            <div class="quiz-result" id="quiz-result"></div>
         </section>
     </div>
 
     <footer>
         <p>&copy; 2025 Odnawialne Źródła Energii - Wszystkie prawa zastrzeżone</p>
+        <div class="social-links">
+            <a href="https://facebook.com">Facebook</a>
+            <a href="https://twitter.com">Twitter</a>
+            <a href="https://instagram.com">Instagram</a>
+        </div>
     </footer>
+
+    <script>
+        function submitQuiz() {
+            const answers = {
+                q1: '2',
+                q2: '3',
+                q3: '2',
+                q4: '4',
+                q5: '1',
+                q6: '3',
+                q7: '2',
+                q8: '4',
+                q9: '1',
+                q10: '1'
+            };
+
+            let score = 0;
+            const form = document.getElementById('quiz-form');
+            const result = document.getElementById('quiz-result');
+
+            for (const [question, answer] of Object.entries(answers)) {
+                const selected = form.elements[question].value;
+                if (selected === answer) {
+                    score++;
+                }
+            }
+
+            result.textContent = `Twój wynik: ${score} z 10`;
+            result.style.color = score >= 7 ? 'green' : 'red';
+        }
+    </script>
 </body>
 
 </html>
